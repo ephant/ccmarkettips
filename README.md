@@ -11,3 +11,7 @@ javascript: (function () {
 	Game.LoadMod('https://raw.githubusercontent.com/ephant/ccmarkettips/master/markettips.js');
 }());
 ```
+
+## Console Use
+
+Copy the code from markettips.js and paste into the console tab of your browser.
