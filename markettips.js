@@ -113,27 +113,29 @@ for (var i in MT.goods){
 
 
 
-for (var i=0;i<MT.goodsById.length;i++)
-{
-    var me=MT.goodsById[i];
-    if (me.hidden) continue;
-    for (var ii=0;ii<me.vals.length;ii++)
+MT.init = function (){
+    for (var i=0;i<MT.goodsById.length;i++)
     {
         var me=MT.goodsById[i];
-        var rval = 10+10*me.id+(Game.Objects['Bank'].level-1);
+        if (me.hidden) continue;
+        for (var ii=0;ii<me.vals.length;ii++)
+        {
+            var me=MT.goodsById[i];
+            var rval = 10+10*me.id+(Game.Objects['Bank'].level-1);
 
-        var str=' Rest: $'+rval.toFixed(2);
-       var rval = document.getElementById('bankGood-'+me.id+'-rval');
-        if(typeof(rval) != 'undefined' && rval != null){
+            var str=' Rest: $'+rval.toFixed(2);
+            var rval = document.getElementById('bankGood-'+me.id+'-rval');
+            if(typeof(rval) != 'undefined' && rval != null){
 
-        } else{
-            rval = document.createElement('div');
-            rval.setAttribute('id', 'bankGood-'+me.id+'-rval');
-            var value = document.getElementById('bankGood-'+me.id+'-val');
-            value.insertAdjacentElement('afterend', rval);
+            } else{
+                rval = document.createElement('div');
+                rval.setAttribute('id', 'bankGood-'+me.id+'-rval');
+                var value = document.getElementById('bankGood-'+me.id+'-val');
+                value.insertAdjacentElement('afterend', rval);
+            }
+            rval.innerHTML = str;
+
         }
-        rval.innerHTML = str;
-
     }
 }
-
+MT.init();
