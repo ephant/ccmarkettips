@@ -8,4 +8,4 @@ Copy this code and save it as a bookmark. Paste it in the URL section. To activa
 
 `javascript: (function () {
 	Game.LoadMod('https://github.com/ephant/ccmarkettips/blob/master/markettips.js');
-}());`
+	}());`
