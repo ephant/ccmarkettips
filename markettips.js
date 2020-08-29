@@ -137,5 +137,7 @@ MT.init = function (){
 
         }
     }
+    Game.Win('Third-party');
 }
+
 MT.init();
