@@ -1,16 +1,17 @@
 # Cookie Clicker Market Tips
 Simple Stock Market Tips addon for Cookie Clicker
 
-Calculates "Resting Value" for each stock and displays below the stock value.
+Calculates "Resting Value" for each stock and displays below the stock value along with a recommendation for whether you should buy or sell.
+It's not get very smart and can't tell if a stock is going up and down so use your own judgement. The mod bases its decision purely on current price and not trajectory.
 
 Right now this addon is very very light and that is all it does. 
 
 ### Features
 * Displays "Resting Value" for each stock
+* Displays Buy, Sell or Hold recommendation based on current value and resting value
 
 ### Planned Features
 * Typical High/Low for each stock under different modes
-* Recommendation for Buy/Sell based on current price
 
 ### Oh and Maybe...?
 * Display mode that stock is in
