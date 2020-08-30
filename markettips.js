@@ -22,7 +22,7 @@ for (var i=0;i<MT.goods.length;i++)
     var val = Number(webstr.replace(/[^0-9.-]+/g,""));
     var stress = (rval-val)*0.02;
     var rec = 'hold'
-    if(stress > 0.5 ) rec = 'buy';
+    if(stress > 0.2 ) rec = 'buy';
     else if(stress < -0.5) rec= 'sell';
     
     str += '<br> Rec: ' + rec;
