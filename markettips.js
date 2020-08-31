@@ -28,12 +28,13 @@ function tick(){
             var sell = document.getElementById('MTbankGood-'+i+'_-All');
             if(stress > 0.5 ){
                 rec = 'Buy';
-                
+                // check if stock is less than stock max
                 buy.classList.add = 'active';
                 sell.classList.remove = 'active';
             } 
             else if(stress < -0.1) { 
                 rec= 'Sell';
+                // check if stock is greater than zero
                 buy.classList.add = 'active';
                 sell.classList.remove = 'active';
             }
