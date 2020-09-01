@@ -45,12 +45,9 @@ var MTHTML = `<style>
                 </div>`
   }
      MTHTML += `</div></div>`
+     
     var assets = 0;
     var bank = 100+(Game.Objects['Bank'].level-1)*3;
-    var rval = 0;
-    var val = 0;
-    var diff = 0;
-    var stockVal = 0;
 MT.tick = function() {  
         bank = 100+(Game.Objects['Bank'].level-1)*3;
     for (var i=0;i<MT.goods.length;i++){
@@ -68,7 +65,7 @@ MT.tick = function() {
         
             stock = Number(stock.replace(/[^0-9.-]+/g,""));
             stockVal = stock*val;
-            assets += StockVal;
+            assets += stockVal;
             max = Number(max.replace(/[^0-9.-]+/g,""));
         
             var stress = (rval-val)*0.02;
