@@ -21,7 +21,7 @@ var MTHTML = `<style>
     <div id="MT-header" style="    padding: 3px 20px 3px 5px;    text-align: center;    height: 39px;    position: absolute;    top: 0;    left: 0;    right: 0;    background: #fff;">
         <h2>Market Tips</h2>
             <table class="MT-table" ><tbody>
-                <tr><th style="text-align: left;">Bank Ceiling</th><td id="MT-bank-ceiling" style="text-align: right"></td></tr>
+                <tr><th>Assets:</th><td id="MT-assets"></td><th style="text-align: left;">Cap:</th><td id="MT-bank-ceiling" style="text-align: right"></td></tr>
             </tbody></table>
     </div>    
         <div id="MT-body" style="    /* margin-top: 34px; */    overflow-y: scroll;    height: 100%;    /* margin-bottom: 34px; */">   
@@ -47,8 +47,10 @@ var MTHTML = `<style>
      MTHTML += `</div></div>`
 
 MT.tick = function() {  
+    var assets = 0;
+    var bank = 100+(Game.Objects['Bank'].level-1)*3;
     for (var i=0;i<MT.goods.length;i++){
-            var bank = 100+(Game.Objects['Bank'].level-1)*3;
+            
             
             var rval = 10+10*i+(Game.Objects['Bank'].level-1);
 
@@ -62,7 +64,7 @@ MT.tick = function() {
         
             stock = Number(stock.replace(/[^0-9.-]+/g,""));
             stockVal = stock*val;
-        
+            assets += StockVal;
             max = Number(max.replace(/[^0-9.-]+/g,""));
         
             var stress = (rval-val)*0.02;
@@ -106,7 +108,7 @@ MT.tick = function() {
         var good = MT.goods[i];
         
         document.getElementById('MT-tips-row-hdr-' + i).innerHTML = good;
-        document.getElementById('MT-bank-ceiling').innerHTML = bank;
+        
         document.getElementById('MT-tips-value-' + i).innerHTML = val;
         document.getElementById('MT-tips-resting-' + i).innerHTML = rval;
         document.getElementById('MT-diff-' + i).innerHTML = diff;
@@ -114,6 +116,8 @@ MT.tick = function() {
         document.getElementById('MT-stock-'+i).innerHTML = Beautify(stock);
         document.getElementById('MT-stockVal-'+i).innerHTML = '$' + Beautify(stockVal);
         }
+    document.getElementById('MT-bank-ceiling').innerHTML = bank;
+    document.getElementById('MT-assets').innerHTML = '$' + Beautify(stockVal);
 }
 MT.init = function() {
     var holder = document.createElement('div');
