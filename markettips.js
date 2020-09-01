@@ -120,7 +120,7 @@ MT.tick = function() {
         document.getElementById('MT-stockVal-'+i).innerHTML = '$' + Beautify(stockVal);
         }
     
-    document.getElementById('MT-assets').innerHTML = '$' + Beautify(stockVal);
+    document.getElementById('MT-assets').innerHTML = '$' + Beautify(assets);
 }
 MT.init = function() {
     var holder = document.createElement('div');
