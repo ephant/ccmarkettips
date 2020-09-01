@@ -50,6 +50,7 @@ var MTHTML = `<style>
     var bank = 100+(Game.Objects['Bank'].level-1)*3;
 MT.tick = function() {  
         bank = 100+(Game.Objects['Bank'].level-1)*3;
+    document.getElementById('MT-bank-ceiling').innerHTML = bank;
     for (var i=0;i<MT.goods.length;i++){
             
             
@@ -117,7 +118,7 @@ MT.tick = function() {
         document.getElementById('MT-stock-'+i).innerHTML = Beautify(stock);
         document.getElementById('MT-stockVal-'+i).innerHTML = '$' + Beautify(stockVal);
         }
-    document.getElementById('MT-bank-ceiling').innerHTML = bank;
+    
     document.getElementById('MT-assets').innerHTML = '$' + Beautify(stockVal);
 }
 MT.init = function() {
