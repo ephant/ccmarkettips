@@ -19,9 +19,10 @@ var MTHTML = `<style>
 .MT-table .MT-disabled span { background: none; color: #333; border-color: #111;}
 </style>
 <div id="MT-holder" style="position: absolute;bottom: 0px;left: 0px;width: 234px;height: 90%;background-color: rgb(134 133 133 / 80% ); text-align: left;box-shadow: -7px 7px 20px 0px rgb(0 0 0);">
-    <div id="MT-header" style="    padding: 3px 20px 3px 5px;    text-align: center;    height: 39px;    position: absolute;    top: 0;    left: 0;    right: 0;    background: rgb(134 133 133 / 90%); z-index: 20;">        <h2>Market Tips</h2>
+    <div id="MT-header" style="    padding: 3px 15px 3px 0;    text-align: center;    height: 39px;    position: absolute;    top: 0;    left: 0;    right: 0;    background: rgb(134 133 133 / 90%); z-index: 20;">
             <table class="MT-table" ><tbody>
-                <tr><th>Assets:</th><td id="MT-assets"></td><th style="text-align: left;">Cap:</th><td id="MT-bank-ceiling" style="text-align: right"></td></tr>
+                <tr><th>Assets</th><th rowspan="2"><h2 style="font-weight: bold;">Market Tips</h2></th><th>Ceiling</th>
+                <tr><td id="MT-assets"></td><td id="MT-bank-ceiling" style="text-align: right"></td></tr>
             </tbody></table>
     </div>    
         <div id="MT-body" style="    /* margin-top: 34px; */    overflow-y: scroll;    height: 100%;    /* margin-bottom: 34px; */">   
@@ -49,6 +50,7 @@ var MTHTML = `<style>
     var assets = 0;
     var bank = 100+(Game.Objects['Bank'].level-1)*3;
 MT.tick = function() {  
+    assets = 0;
         bank = 100+(Game.Objects['Bank'].level-1)*3;
     bank = '$' + bank.toFixed(2);
     document.getElementById('MT-bank-ceiling').innerHTML = bank;
