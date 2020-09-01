@@ -17,9 +17,8 @@ var MTHTML = `<style>
 .MT-table .MT-sell.MT-active span { background: #94cd50;}
 .MT-table .MT-disabled span { background: #ccc; color: #333;}
 </style>
-<div id="MT-holder" style="position: absolute;bottom: 0px;left: 0px;width: 234px;height: 90%;background-color: rgb(134 133 133 / 86%); text-align: left;box-shadow: -7px 7px 20px 0px rgb(0 0 0);">
-    <div id="MT-header" style="    padding: 3px 20px 3px 5px;    text-align: center;    height: 39px;    position: absolute;    top: 0;    left: 0;    right: 0;    background: rgb(134 133 133 / 86%)">
-        <h2>Market Tips</h2>
+<div id="MT-holder" style="position: absolute;bottom: 0px;left: 0px;width: 234px;height: 90%;background-color: rgb(134 133 133 / 80% ); text-align: left;box-shadow: -7px 7px 20px 0px rgb(0 0 0);">
+    <div id="MT-header" style="    padding: 3px 20px 3px 5px;    text-align: center;    height: 39px;    position: absolute;    top: 0;    left: 0;    right: 0;    background: rgb(134 133 133 / 90%); z-index: 20;">        <h2>Market Tips</h2>
             <table class="MT-table" ><tbody>
                 <tr><th style="text-align: left;">Bank Ceiling</th><td id="MT-bank-ceiling" style="text-align: right"></td></tr>
             </tbody></table>
