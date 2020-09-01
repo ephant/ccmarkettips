@@ -45,10 +45,14 @@ var MTHTML = `<style>
                 </div>`
   }
      MTHTML += `</div></div>`
-
-MT.tick = function() {  
     var assets = 0;
     var bank = 100+(Game.Objects['Bank'].level-1)*3;
+    var rval = 0;
+    var val = 0;
+    var diff = 0;
+    var stockVal = 0;
+MT.tick = function() {  
+        bank = 100+(Game.Objects['Bank'].level-1)*3;
     for (var i=0;i<MT.goods.length;i++){
             
             
