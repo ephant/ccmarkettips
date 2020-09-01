@@ -9,6 +9,7 @@ It's not get very smart and can't tell if a stock is going up and down so use yo
 * Stock Market tips now display in their own panel.
 * Table for each stock includes Stock, Stock Value, Price, Resting Value, Difference Between Price and Resting Value and Recommendation.
 * Buy/Sell buttons directly in panel allow you to buy or sell max stock.
+* Total Asset value now displayed (ie if you sold all stock at current prices).
 
 ### Features
 * Displays "Resting Value" for each stock and directly compares with current price.
