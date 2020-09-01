@@ -1,7 +1,6 @@
 Game.Win('Third-party');
 var MT = {};
 
-
 MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','WCH','HNY','CKI','RCP'];
 
 var buy = '';
@@ -123,8 +122,6 @@ MT.init = function() {
     var row = document.getElementById('bankGraph');
     row.insertAdjacentElement('afterend', holder);
     MT.tick();
-    
-
 
 }
 MT.init();
