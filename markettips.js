@@ -6,7 +6,7 @@ MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','W
 var buy = '';
 var sell = '';
 var MTHTML = `<style>
-.MT-tips-hdr { text-align: center; font-weight: 500; margin-bottom: 3px; } 
+.MT-tips-hdr { text-align: center; font-weight: 500; margin-bottom: 3px; z-index: 20;} 
 .MT-tips-row { padding: 3px 5px; border-bottom: 1px solid #ccc;} 
 .MT-table { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 5px; }
 .MT-tips-row th { text-align: left; } 
