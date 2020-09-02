@@ -6,17 +6,21 @@ MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','W
 var buy = '';
 var sell = '';
 var MTHTML = `<style>
+
 .MT-tips-hdr { text-align: center; font-weight: 500; margin-bottom: 3px; z-index: 20;} 
-.MT-tips-row { padding: 3px 0px; border-bottom: 1px solid #ccc;} 
+.MT-tips-row { padding: 3px 0px; border-bottom: 1px solid rgba(255,255,255,0.2); text-shadow: 1px 1px 2px #fff} 
 .MT-table { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 5px; }
 .MT-tips-row th { text-align: left; } 
 .MT-tips-row td { text-align: right;}
 .MT-table .MT-high { color: #1b7a2f;}
 .MT-table .MT-low { color: #c00;}
-.MT-table span { background: rgba(0,0,0,0.1);}
+.MT-table span { background: rgba(0,0,0,0.7);}
 .MT-table .MT-active span { background: #a358ff; color: #333;}
 .MT-table .MT-sell.MT-active span { background: #94cd50;}
 .MT-table .MT-disabled span { background: none; color: #333; border-color: #111;}
+#MT-body::-webkit-scrollbar {
+  display: none;
+}
 </style>
 <div id="MT-holder" style="position: absolute;bottom: 0px;left: 0px;width: 234px;height: 90%;background-color: rgb(134 133 133 / 80% ); text-align: left;box-shadow: -7px 7px 20px 0px rgb(0 0 0);">
     <div id="MT-header" style="    padding: 3px 15px 3px 0;    text-align: center;    height: 39px;    position: absolute;    top: 0;    left: 0;    right: 0;    background: rgb(134 133 133 / 90%); z-index: 20;">
