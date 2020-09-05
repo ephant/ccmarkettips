@@ -12,10 +12,10 @@ var MTHTML = `<style>
 .MT-table { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 5px; }
 .MT-tips-row th { text-align: left; } 
 .MT-tips-row td { text-align: right;}
-.MT-table .MT-high { color: #1b7a2f;}
-.MT-table .MT-low { color: #c00;}
-.MT-table span { background: rgba(0,0,0,0.7);}
-.MT-table .MT-active span { background: #a358ff; color: #333;}
+.MT-table .MT-high { color: #1b7a2f; text-shadow: none;}
+.MT-table .MT-low { color: #c00; text-shadow: none;}
+.MT-table span { background: rgba(0,0,0,0.7); text-shadow: none;}
+.MT-table .MT-active span { background: #a358ff; color: #333; }
 .MT-table .MT-sell.MT-active span { background: #94cd50;}
 .MT-table .MT-disabled span { background: none; color: #333; border-color: #111;}
 #MT-body::-webkit-scrollbar {
