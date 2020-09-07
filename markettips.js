@@ -120,6 +120,7 @@ MT.tick = function() {
         
         document.getElementById('MT-tips-value-' + i).innerHTML = val;
         document.getElementById('MT-tips-resting-' + i).innerHTML = rval;
+        document.getElementById('MT-bankGood-' + i +'-rest').innerHTML = 'resting: ' + rval;
         document.getElementById('MT-diff-' + i).innerHTML = diff;
         document.getElementById('MT-tips-rec-' + i).innerHTML = rec;
         document.getElementById('MT-stock-'+i).innerHTML = Beautify(stock);
@@ -134,6 +135,16 @@ MT.init = function() {
     holder.innerHTML = MTHTML;
     var row = document.getElementById('bankGraph');
     row.insertAdjacentElement('afterend', holder);
+    for (var i=0;i<MT.goods.length;i++){
+
+	 		var rest = 10+10*i+(Game.Objects['Bank'].level-1);
+	 		var div = document.createElement('div');
+    		div.setAttribute('id','MT-bankGood-' + i + '-rest');
+    		div.innerHTML = 'resting: $' + me.rest.toFixed(2);
+      me.valL.insertAdjacentElement('afterend', div);
+	 		
+	 	
+}
     MT.tick();
 
 }
