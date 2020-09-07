@@ -136,12 +136,12 @@ MT.init = function() {
     var row = document.getElementById('bankGraph');
     row.insertAdjacentElement('afterend', holder);
     for (var i=0;i<MT.goods.length;i++){
-
+		var valL = l('bankGood-'+i+'-val');
 	 		var rest = 10+10*i+(Game.Objects['Bank'].level-1);
 	 		var div = document.createElement('div');
     		div.setAttribute('id','MT-bankGood-' + i + '-rest');
     		div.innerHTML = 'resting: $' + me.rest.toFixed(2);
-      me.valL.insertAdjacentElement('afterend', div);
+      valL.insertAdjacentElement('afterend', div);
 	 		
 	 	
 }
