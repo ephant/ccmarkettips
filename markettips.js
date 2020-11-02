@@ -1,7 +1,7 @@
 Game.Win('Third-party');
 var MT = {};
 
-MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','WCH','HNY','CKI','RCP'];
+MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','WCH','HNY','CKI','RCP','SBD'];
 
 
     var assets = 0;
