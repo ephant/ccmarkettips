@@ -100,4 +100,4 @@ MT.init = function() {
 MT.init();
 
 
-setInterval(MT.tick, 60*1000);
+setInterval(MT.tick, 10*1000);
