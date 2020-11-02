@@ -5,7 +5,10 @@ Calculates "Resting Value" for each stock along with the difference between rest
 
 It's not get very smart and can't tell if a stock is going up and down so use your own judgement. The mod bases its decision purely on current price and not trajectory.
 
-### Features
+## Updates
+* Added new building
+
+## Features
 * Displays "Resting Value" for each stock and directly compares with current price.
 * Displays value of your current assets.
 * Highlights "buy" or "sell" buttons for stocks if it might be a good time to buy or sell based on current price.
