@@ -6,6 +6,7 @@ Calculates "Resting Value" for each stock along with the difference between rest
 It's not get very smart and can't tell if a stock is going up and down so use your own judgement. The mod bases its decision purely on current price and not trajectory.
 
 ## Updates
+* Increased tick-rate of addon to decrease desync with CC ticks
 * Added new building
 
 ## Features
