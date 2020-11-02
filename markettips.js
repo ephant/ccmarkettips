@@ -7,11 +7,32 @@ MT.goodModes = ['Stable', 'Slow Rise', 'Slow Fall', 'Fast Rise', 'Fast Fall', 'C
 const getModeNameElementId = goodId => `MT-bankGood-${goodId}-mode-name`;
 const getModeDurationElementId = goodId => `MT-bankGood-${goodId}-mode-duration`;
 
+MT.getGoodDurationColor = function getGoodDurationColor(goodsByDuration, goodId) {
+    if (goodsByDuration[0].id === goodId) {
+        return 'red';
+    }
+    
+    if (goodsByDuration[1].id === goodId) {
+        return 'orange';
+    }
+    
+    if (goodsByDuration[2].id === goodId) {
+        return 'yellow';
+    }
+    
+    return null;
+}
+
     var assets = 0;
     var bank = 100+(Game.Objects['Bank'].level-1)*3;
 MT.tick = function() {  
     assets = 0;
-        bank = 100+(Game.Objects['Bank'].level-1)*3;
+    bank = 100+(Game.Objects['Bank'].level-1)*3;
+    
+    const goodsByDurationAsc = Game.Objects['Bank'].minigame.goodsById
+        .slice()
+        .sort((a, b) => a.dur - b.dur);
+    
     for (var i=0;i<MT.goods.length;i++){
             
             
@@ -78,6 +99,7 @@ MT.tick = function() {
             
             const modeDurationEl = document.getElementById(getModeDurationElementId(i));
             modeDurationEl.innerHTML = good.dur;
+            modeDurationEl.style.color = MT.getGoodDurationColor(goodsByDurationAsc, i);
         }
     
     document.getElementById('MT-assets').innerHTML = 'Assets: $' + Beautify(assets);
