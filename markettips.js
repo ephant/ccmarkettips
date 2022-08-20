@@ -1,7 +1,7 @@
 Game.Win('Third-party');
 var MT = {};
 
-MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','WCH','HNY','CKI','RCP','SBD'];
+MT.goods = ['CRL','CHC','BTR','SUG','NUT','SLT','VNL','EGG','CNM','CRM','JAM','WCH','HNY','CKI','RCP','SBD','PBL'];
 MT.goodModes = ['Stable', 'Slow Rise', 'Slow Fall', 'Fast Rise', 'Fast Fall', 'Chaotic'];
 
 const getModeNameElementId = goodId => `MT-bankGood-${goodId}-mode-name`;
